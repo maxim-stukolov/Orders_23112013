@@ -1,0 +1,222 @@
+package com.orders.controllers;
+
+import org.datamodel.OrderDataModel;
+import org.orders.entity.Order;
+import org.orders.entity.Proposal;
+import org.orders.entity.ShopingCart;
+import org.orders.entity.ShopingCartItem;
+
+import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
+import javax.faces.model.SelectItem;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+@ManagedBean(name="ordersController")
+@SessionScoped
+public class OrdersController {
+    private List<Order> orderList;
+    //Добавление множественного выбора строк заказов
+    private List<Order> selectedOrderList;
+    private Order[] selectedOrders;
+    private OrderDataModel mediumOrdersModel;
+    private SelectItem[] statusOptions;
+    private  String[] statusValues;
+
+    private Order selectedOrder;
+    @ManagedProperty("#{proposalController}")
+    ProposalController proposalController;
+    @ManagedProperty("#{userController}")
+    UserController userController;
+
+
+    @PostConstruct
+    public void init(){
+        FacesContext.getCurrentInstance().getExternalContext().getSession(true);
+        orderList = new ArrayList<Order>();
+
+        Order order1 = new Order();
+        order1.setProposalId(proposalController.getProposalList().get(0).getProposalId());
+        order1.setOrderId(Math.random()*1000000000);
+        order1.setQty(Double.valueOf("2"));
+        order1.setPrice(proposalController.getProposalList().get(0).getPrice());
+        order1.setAmount(proposalController.getProposalList().get(0).getPrice() * 2);
+        order1.setProduct(proposalController.getProposalList().get(0).getProduct());
+        order1.setStatus("Оформлен");
+        order1.setBonus(false);
+
+        Order order2 = new Order();
+        order2.setProposalId(proposalController.getProposalList().get(1).getProposalId());
+        order2.setOrderId(Math.random()*1000000000);
+        order2.setQty(Double.valueOf("4"));
+        order2.setPrice(proposalController.getProposalList().get(1).getPrice());
+        order2.setAmount(proposalController.getProposalList().get(1).getPrice() * 4);
+        order2.setProduct(proposalController.getProposalList().get(1).getProduct());
+        order2.setStatus("Оформлен");
+        order2.setBonus(false);
+
+        orderList.add(order1);
+        orderList.add(order2);
+
+        mediumOrdersModel = new OrderDataModel(orderList);
+
+        statusValues = new String[4];
+        statusValues[0] = "Обработка";
+        statusValues[1] = "Оплачен";
+        statusValues[2] = "В пути";
+        statusValues[3] = "Доставлен";
+        statusOptions = createFilterOptions(statusValues);
+
+    }
+    public void setBonusTrue(Order order){
+        order.setBonus(true);
+    }
+    private SelectItem[] createFilterOptions(String[] data)  {
+        SelectItem[] options = new SelectItem[data.length + 1];
+
+        options[0] = new SelectItem("", "Select");
+        for(int i = 0; i < data.length; i++) {
+            options[i + 1] = new SelectItem(data[i], data[i]);
+        }
+
+        return options;
+    }
+
+    public SelectItem[] getStatusOptions() {
+        return statusOptions;
+    }
+
+    //Создание строк заказов из корзины покупателя на форме shop.xhtml
+    public void addOrders(ShopingCart shopingCart){
+           for(ShopingCartItem item: shopingCart.getShopingCartItemList()){
+               Order order = new Order();
+               order.setCustomer(userController.getCustomerList().get(0));
+               order.setProposalId(item.getProposal().getProposalId());
+               order.setOrderId(Math.random() * 1000000000);
+               order.setQty(item.getQty());
+               order.setPrice(item.getPrice());
+               order.setAmount(item.getPrice() * item.getQty());
+               order.setProduct(item.getProposal().getProduct());
+               order.setStatus("Оформлен");
+               order.setBonus(false);
+               order.setOrderDate(new Date());
+               orderList.add(order);
+           }
+        proposalController.clearShoppingCart();
+        addMessage("Заказ отправлен на обработку!");
+    }
+    public void viewSelected(){
+        for(Order order : selectedOrders){
+            addMessage(order.getOrderId().toString());
+        }
+    }
+
+    public void setStatusSelectedOrders(String status){
+        for(Order order : selectedOrders){
+            order.setStatus(status);
+        }
+        addMessage("Статус установлен");
+    }
+
+    public Double getFillPercent(Proposal proposal){
+        Double percent = 0.0;
+        percent = getOrderedQtyOnProposal(proposal) / proposal.getStartQty();
+        return percent;
+    }
+
+    public Double getOrderedQtyOnProposal(Proposal proposal){
+            Double qty = Double.valueOf(0);
+            for(Order order: orderList){
+               if(order.getProposalId().equals(proposal.getProposalId()) &&
+                       (order.getStatus().equals("Оплачен") || order.getStatus().equals("Оплачен Б  онусами"))
+                       ){
+                   qty+=order.getQty();
+               }
+           }
+        return qty;
+    }
+
+    public  Double getRemainQty(Proposal proposal){
+        Double qty = Double.valueOf(0);
+        qty = proposal.getStartQty() - getOrderedQtyOnProposal(proposal);
+        return qty;
+    }
+    public  Double getMinQty(Proposal proposal){
+        return proposal.getMinQty();
+    }
+    public void setStatusOrder(String status){
+        selectedOrder.setStatus(status);
+    }
+
+    public List<Order> getOrderList() {
+        return orderList;
+    }
+    public void filterOrderList(String value){
+        for(Order order : getOrderList()){
+
+        }
+    }
+    public void setOrderList(List<Order> orderList) {
+        this.orderList = orderList;
+    }
+
+    public Order getSelectedOrder() {
+        return selectedOrder;
+    }
+
+    public void setSelectedOrder(Order selectedOrder) {
+        this.selectedOrder = selectedOrder;
+    }
+
+    public ProposalController getProposalController() {
+        return proposalController;
+    }
+
+    public void setProposalController(ProposalController proposalController) {
+        this.proposalController = proposalController;
+    }
+
+    public UserController getUserController() {
+        return userController;
+    }
+
+    public void setUserController(UserController userController) {
+        this.userController = userController;
+    }
+
+    public List<Order> getSelectedOrderList() {
+        return selectedOrderList;
+    }
+
+    public void setSelectedOrderList(List<Order> selectedOrderList) {
+        this.selectedOrderList = selectedOrderList;
+    }
+
+    public OrderDataModel getMediumOrdersModel() {
+        return mediumOrdersModel;
+    }
+
+    public void setMediumOrdersModel(OrderDataModel mediumOrdersModel) {
+        this.mediumOrdersModel = mediumOrdersModel;
+    }
+
+    public Order[] getSelectedOrders() {
+        return selectedOrders;
+    }
+
+    public void setSelectedOrders(Order[] selectedOrders) {
+        this.selectedOrders = selectedOrders;
+    }
+
+    public void addMessage(String summary) {
+        FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, summary,  null);
+        FacesContext.getCurrentInstance().addMessage(null, message);
+    }
+
+
+}

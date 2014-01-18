@@ -1,0 +1,1461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Orders:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" readonly="true" id="58407f41-33ee-43de-8bc3-d5b3af9beaa9" name="Default" comment="update 23/11/2013">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/orders/entity/Proposal.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/orders/controllers/BonusController.java" afterPath="$PROJECT_DIR$/src/com/orders/controllers/BonusController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/orders/entity/BonusSetup.java" afterPath="$PROJECT_DIR$/src/org/orders/entity/BonusSetup.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/orders/entity/BonusTrans.java" afterPath="$PROJECT_DIR$/src/org/orders/entity/BonusTrans.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/orders/controllers/CarouselController.java" afterPath="$PROJECT_DIR$/src/com/orders/controllers/CarouselController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/orders/controllers/CompanyController.java" afterPath="$PROJECT_DIR$/src/com/orders/controllers/CompanyController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/orders/entity/Customer.java" afterPath="$PROJECT_DIR$/src/org/orders/entity/Customer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/orders/controllers/EcorescategoryController.java" afterPath="$PROJECT_DIR$/src/com/orders/controllers/EcorescategoryController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/orders/facade/EcorescategoryFacade.java" afterPath="$PROJECT_DIR$/src/com/orders/facade/EcorescategoryFacade.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/orders/facade/EcoresproductcategoryFacade.java" afterPath="$PROJECT_DIR$/src/com/orders/facade/EcoresproductcategoryFacade.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/orders/controllers/ItemController.java" afterPath="$PROJECT_DIR$/src/com/orders/controllers/ItemController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/datamodel/OrderDataModel.java" afterPath="$PROJECT_DIR$/src/org/datamodel/OrderDataModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Orders.iml" afterPath="$PROJECT_DIR$/Orders.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/orders/controllers/OrdersController.java" afterPath="$PROJECT_DIR$/src/com/orders/controllers/OrdersController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Orders_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Orders_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/orders/facade/ProductFacade.java" afterPath="$PROJECT_DIR$/src/com/orders/facade/ProductFacade.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/orders/controllers/ProposalController.java" afterPath="$PROJECT_DIR$/src/com/orders/controllers/ProposalController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/orders/entity/ShopingCart.java" afterPath="$PROJECT_DIR$/src/org/orders/entity/ShopingCart.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/orders/controllers/UIController.java" afterPath="$PROJECT_DIR$/src/com/orders/controllers/UIController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/orders/controllers/UserController.java" afterPath="$PROJECT_DIR$/src/com/orders/controllers/UserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/orders/facade/UserF.java" afterPath="$PROJECT_DIR$/src/com/orders/facade/UserF.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/orders/entity/UsersE.java" afterPath="$PROJECT_DIR$/src/org/orders/entity/UsersE.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bonus.xhtml" afterPath="$PROJECT_DIR$/web/bonus.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resources/composite/buy.xhtml" afterPath="$PROJECT_DIR$/web/resources/composite/buy.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/company.xhtml" afterPath="$PROJECT_DIR$/web/company.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/customers.xhtml" afterPath="$PROJECT_DIR$/web/customers.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/ecorescategories.xhtml" afterPath="$PROJECT_DIR$/web/ecorescategories.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/itemcard.xhtml" afterPath="$PROJECT_DIR$/web/itemcard.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/items.xhtml" afterPath="$PROJECT_DIR$/web/items.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resources/composite/logo.xhtml" afterPath="$PROJECT_DIR$/web/resources/composite/logo.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/myhistory.xhtml" afterPath="$PROJECT_DIR$/web/myhistory.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/myinfo.xhtml" afterPath="$PROJECT_DIR$/web/myinfo.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/myorders.xhtml" afterPath="$PROJECT_DIR$/web/myorders.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/orders.xhtml" afterPath="$PROJECT_DIR$/web/orders.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/proposal.xhtml" afterPath="$PROJECT_DIR$/web/proposal.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/shop.xhtml" afterPath="$PROJECT_DIR$/web/shop.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/shopcart.xhtml" afterPath="$PROJECT_DIR$/web/shopcart.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resources/css/theme.css" afterPath="$PROJECT_DIR$/web/resources/css/theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resources/composite/topbar.xhtml" afterPath="$PROJECT_DIR$/web/resources/composite/topbar.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/users.xhtml" afterPath="$PROJECT_DIR$/web/users.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <list id="c093d4f6-402f-4c8a-b27e-6be517091a38" name="Failed commit: Default" comment="first commit" />
+    <list id="54360a20-74b9-4960-9800-bf24f0c1e540" name="Failed commit: Failed commit: Default" comment="update 23/11/2013" />
+    <ignored path="Orders.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <file path="/index.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1390029693422" ignored="false" />
+    <file path="$PROJECT_DIR$/../JSFexample/web/WEB-INF/web.xml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1381520603288" ignored="false" />
+    <file path="$PROJECT_DIR$/../JSFexample/web/WEB-INF/faces-config.xml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1381520603288" ignored="false" />
+    <file path="/Users.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384450998828" ignored="false" />
+    <file path="/UserController.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389378236901" ignored="false" />
+    <file path="/a.sql" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388867734215" ignored="false" />
+    <file path="/dummy.sql" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388867734216" ignored="false" />
+    <file path="/UserFacade.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1383339202803" ignored="false" />
+    <file path="/fragment.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389726358389" ignored="false" />
+    <file path="/persistence.xml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389725786806" ignored="false" />
+    <file path="/MySQL" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1381532388627" ignored="false" />
+    <file path="/theme.css" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388510109137" ignored="false" />
+    <file path="/modern.css" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1381779654201" ignored="false" />
+    <file path="/m-styles.min.css" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1381781486413" ignored="false" />
+    <file path="/web.xml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389724120189" ignored="false" />
+    <file path="/input.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1381952224788" ignored="false" />
+    <file path="/items.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389476876815" ignored="false" />
+    <file path="/topbar.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388782496982" ignored="false" />
+    <file path="/Items.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1381955269428" ignored="false" />
+    <file path="/users.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389376390845" ignored="false" />
+    <file path="/ItemController.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389476764356" ignored="false" />
+    <file path="/UIController.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388995072257" ignored="false" />
+    <file path="/Proposal.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1385919569227" ignored="false" />
+    <file path="/ProposalController.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388485290245" ignored="false" />
+    <file path="/proposal.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389475511745" ignored="false" />
+    <file path="/buy.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1386615679247" ignored="false" />
+    <file path="/ShopingCart.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1386531394471" ignored="false" />
+    <file path="/ShopingCartItem.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1382890971622" ignored="false" />
+    <file path="/Customer.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1386874974457" ignored="false" />
+    <file path="/customer.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1382382626372" ignored="false" />
+    <file path="/customers.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389378070700" ignored="false" />
+    <file path="/shop.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388663717411" ignored="false" />
+    <file path="/orders.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388696781852" ignored="false" />
+    <file path="/Order.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384956644696" ignored="false" />
+    <file path="/OrdersController.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388998319732" ignored="false" />
+    <file path="/test.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1382711302169" ignored="false" />
+    <file path="/OrderDataModel.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1386870273575" ignored="false" />
+    <file path="/bonus.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388782732889" ignored="false" />
+    <file path="/BonusController.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389376882650" ignored="false" />
+    <file path="/BonusTrans.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388264143767" ignored="false" />
+    <file path="/BonusSetup.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1382734106757" ignored="false" />
+    <file path="/personal.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384009624205" ignored="false" />
+    <file path="/logo.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388179379918" ignored="false" />
+    <file path="/company.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388509423714" ignored="false" />
+    <file path="/Company.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1383712275881" ignored="false" />
+    <file path="/shopcart.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1386614571146" ignored="false" />
+    <file path="/search.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1387910783550" ignored="false" />
+    <file path="/personalmenu.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1382894337328" ignored="false" />
+    <file path="/info.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1382895201348" ignored="false" />
+    <file path="/myorders.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388244343063" ignored="false" />
+    <file path="/mydelivery.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1382895862039" ignored="false" />
+    <file path="/myhistory.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1382898096995" ignored="false" />
+    <file path="/myinfo.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388344268499" ignored="false" />
+    <file path="/carousel.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384202302435" ignored="false" />
+    <file path="/item.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1383076340221" ignored="false" />
+    <file path="/itemcard.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388996929889" ignored="false" />
+    <file path="/UserF.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1383239915303" ignored="false" />
+    <file path="/EntityFacade.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1383504834565" ignored="false" />
+    <file path="/AbstractFacade.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389725993989" ignored="false" />
+    <file path="/IUserFacade.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1383251458326" ignored="false" />
+    <file path="/UsersE.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1383713893990" ignored="false" />
+    <file path="/TestCompile.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1383714181482" ignored="false" />
+    <file path="$PROJECT_DIR$/../export/Struts/OrdersTest/src/META-INF/persistence.xml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1383374852334" ignored="false" />
+    <file path="$PROJECT_DIR$/../export/Struts/OrdersTest/web/WEB-INF/web.xml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1383375487496" ignored="false" />
+    <file path="$PROJECT_DIR$/../export/Struts/OrdersTest/web/WEB-INF/faces-config.xml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1383374714577" ignored="false" />
+    <file path="$PROJECT_DIR$/../export/Struts/OrdersTest/src/org/entity/Users.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1383374789851" ignored="false" />
+    <file path="$PROJECT_DIR$/../export/Struts/OrdersTest/web/index.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1383375153474" ignored="false" />
+    <file path="$PROJECT_DIR$/../OrdersTest/web/index.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384452247858" ignored="false" />
+    <file path="$PROJECT_DIR$/../OrdersTest/src/facade/OrderTest.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384453136364" ignored="false" />
+    <file path="$PROJECT_DIR$/../OrdersTest/src/org/entity/Users.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384453649289" ignored="false" />
+    <file path="/OrderTest.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384452972548" ignored="false" />
+    <file path="$PROJECT_DIR$/../OrdersTest/src/facade/AbstractFacade.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1383401783387" ignored="false" />
+    <file path="$PROJECT_DIR$/../OrdersTest/src/facade/UserFacade.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384450779837" ignored="false" />
+    <file path="/Dummy.txt" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1390029721623" ignored="false" />
+    <file path="/CompanyFacade.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1383509332115" ignored="false" />
+    <file path="/CompanyController.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388509411219" ignored="false" />
+    <file path="/BaseEntity.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384109892357" ignored="false" />
+    <file path="/BaseEntityAudit.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1383713305296" ignored="false" />
+    <file path="/Carousel.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1383852275649" ignored="false" />
+    <file path="/CarouselController.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384953062966" ignored="false" />
+    <file path="/crud.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384007589042" ignored="false" />
+    <file path="$PROJECT_DIR$/../GAETest/web/WEB-INF/web.xml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384088775595" ignored="false" />
+    <file path="$PROJECT_DIR$/../GAETest/web/index.jsp" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384095579973" ignored="false" />
+    <file path="/index.jsp" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384095579242" ignored="false" />
+    <file path="$PROJECT_DIR$/../GAETest/.idea/workspace.xml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384199399317" ignored="false" />
+    <file path="$PROJECT_DIR$/../GAETest/.idea/misc.xml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384089489239" ignored="false" />
+    <file path="/DummyFile.xpath" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389723704748" ignored="false" />
+    <file path="$PROJECT_DIR$/../GAETest/web/WEB-INF/appengine-web.xml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384095403905" ignored="false" />
+    <file path="/Ecorescategory.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384285312216" ignored="false" />
+    <file path="/ecorescategory.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384207147289" ignored="false" />
+    <file path="/Ecoresproductcategory.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384201100864" ignored="false" />
+    <file path="/Product.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384952941211" ignored="false" />
+    <file path="/EcorescategoryController.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1385929444866" ignored="false" />
+    <file path="/ecorescategories.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389376213229" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Google App Engine/appengine-java-sdk/demos/rytrytr/web/WEB-INF/web.xml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384288950285" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Google App Engine/appengine-java-sdk/demos/rytrytr/src/META-INF/persistence.xml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384288950623" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Google App Engine/appengine-java-sdk/demos/rytrytr/web/WEB-INF/faces-config.xml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384288950286" ignored="false" />
+    <file path="dbtable:/63618bdc/d8c16dc5-bfaa-48bf-885f-d26f72b27934/orders..users" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384453092286" ignored="false" />
+    <file path="dbtable:/63618bdc/d8c16dc5-bfaa-48bf-885f-d26f72b27934/orders..sequence_table" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384453246187" ignored="false" />
+    <file path="/EcoresproductcategoryFacade.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384897012447" ignored="false" />
+    <file path="/ProductFacade.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384949457502" ignored="false" />
+    <file path="/SelectedProducts.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384957832919" ignored="false" />
+    <file path="/SelectedProduct.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1384957962414" ignored="false" />
+    <file path="/ProductsDataModel.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1385066047584" ignored="false" />
+    <file path="$PROJECT_DIR$/../Orders/.idea/workspace.xml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1385192934110" ignored="false" />
+    <file path="/EcorescategoryFacade.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1385885632996" ignored="false" />
+    <file path="/ProposalFacade.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1385897854274" ignored="false" />
+    <file path="/ItemCardController.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388996449487" ignored="false" />
+    <file path="/OrdersFacade.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388244507980" ignored="false" />
+    <file path="/Orders.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388219023464" ignored="false" />
+    <file path="/CustomerFacade.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1387615597317" ignored="false" />
+    <file path="/LoginController.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388485428200" ignored="false" />
+    <file path="/login.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1387566592646" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Google App Engine/appengine-java-sdk/demos/AspectJTest/web/WEB-INF/web.xml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1387709825880" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Google App Engine/appengine-java-sdk/demos/AspectJTest/src/AspectJTest.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1387711257722" ignored="false" />
+    <file path="/AspectJTest.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1387709974440" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Google App Engine/appengine-java-sdk/demos/AspectJTest/src/GreetingService.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1387711120619" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Google App Engine/appengine-java-sdk/demos/AspectJTest/src/GreetingAspect.aj" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1387769406603" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Google App Engine/appengine-java-sdk/demos/AspectJTest/src/lucene/AnalysisDemo.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388173093855" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Google App Engine/appengine-java-sdk/demos/AspectJTest/src/lucene/IndexerDemo.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1387827787776" ignored="false" />
+    <file path="/a.dummy" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1387770135032" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Google App Engine/appengine-java-sdk/demos/AspectJTest/src/lucene/SearchDemo.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1387828242558" ignored="false" />
+    <file path="/SearchDemo.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1387828185419" ignored="false" />
+    <file path="/SearchController.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388178912060" ignored="false" />
+    <file path="/IndexerController.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388004472279" ignored="false" />
+    <file path="/administration.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389513737155" ignored="false" />
+    <file path="/AnalysisDemo.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388173092386" ignored="false" />
+    <file path="/BonusFacade.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388778905660" ignored="false" />
+    <file path="/Bonussum.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388694070509" ignored="false" />
+    <file path="/BonussumFacade.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388693859279" ignored="false" />
+    <file path="/Relevantproducts.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1388994077936" ignored="false" />
+    <file path="/RelevantprodFacade.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389471682063" ignored="false" />
+    <file path="/ProductDataModel.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389464272594" ignored="false" />
+    <file path="/RelevantProductsModel.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389476212281" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Google App Engine/appengine-java-sdk/demos/AutoCompletion/web/WEB-INF/web.xml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389719305163" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Google App Engine/appengine-java-sdk/demos/AutoCompletion/src/META-INF/persistence.xml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389715645717" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Google App Engine/appengine-java-sdk/demos/AutoCompletion/web/WEB-INF/faces-config.xml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389715645716" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Google App Engine/appengine-java-sdk/demos/AutoCompletion/web/index.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389719283867" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Frilance/Projects/web/WEB-INF/web.xml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389724120189" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Frilance/Projects/web/WEB-INF/faces-config.xml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389723507943" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Frilance/Projects/web/index.xhtml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1390029719213" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Frilance/Projects/META-INF/persistence.xml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389727236871" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Frilance/Projects/src/controllers/TestController.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389990496331" ignored="false" />
+    <file path="/TestController.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389990292075" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Frilance/Projects/src/facade/AbstractFacade.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389725995993" ignored="false" />
+    <file path="db-console:/5b45ccbb/d8c16dc5-bfaa-48bf-885f-d26f72b27934/" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389725879478" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Frilance/Projects/src/entity/Table1.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389812453781" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Frilance/Projects/src/entity/Table2.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389990750305" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Frilance/Projects/src/facade/TableFacade.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389990618720" ignored="false" />
+    <file path="/TableFacade.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389990618720" ignored="false" />
+    <file path="dbtable:/5b45ccbb/d8c16dc5-bfaa-48bf-885f-d26f72b27934/test..table1" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389726623156" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Frilance/Projects/src/DateConverter.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389786842139" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Frilance/Projects/src/converters/DateConverter.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389812788841" ignored="false" />
+    <file path="/DateConverter.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389811536137" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Frilance/Projects/src/converters/UsersConverter.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389986852502" ignored="false" />
+    <file path="/UsersConverter.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389986668670" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Frilance/Projects/src/facade/Table2Facade.java" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389990505858" ignored="false" />
+    <file path="dbtable:/5b45ccbb/d8c16dc5-bfaa-48bf-885f-d26f72b27934/test..table2" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1389990811996" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Frilance/Projects/.idea/workspace.xml" changelist="58407f41-33ee-43de-8bc3-d5b3af9beaa9" time="1390029823587" ignored="false" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="false" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="C:\Projects\Java\Projects\Orders" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DatabaseView">
+    <flatten value="false" />
+    <groupTables value="false" />
+    <sortChildren value="false" />
+  </component>
+  <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <breakpoint_rules />
+    <ui_properties />
+  </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="hideWarnings" value="true" />
+    <option name="HIDE_WARNINGS" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Orders" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="items.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/items.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="127" column="41" selection-start="6271" selection-end="6271" vertical-scroll-proportion="-44.0">
+              <folding>
+                <marker date="1389476878700" expanded="true" signature="1318:1330" placeholder="{...}" />
+                <marker date="1389476878700" expanded="true" signature="2579:2590" placeholder="{...}" />
+                <marker date="1389476878700" expanded="true" signature="2799:2854" placeholder="{...}" />
+                <marker date="1389476878700" expanded="true" signature="3062:3117" placeholder="{...}" />
+                <marker date="1389476878700" expanded="true" signature="3658:3670" placeholder="{...}" />
+                <marker date="1389476878700" expanded="true" signature="4670:4682" placeholder="{...}" />
+                <marker date="1389476878700" expanded="true" signature="6547:6555" placeholder="{...}" />
+                <marker date="1389476878700" expanded="true" signature="6646:6655" placeholder="{...}" />
+                <marker date="1389476878700" expanded="true" signature="6839:6848" placeholder="{...}" />
+                <marker date="1389476878700" expanded="true" signature="7092:7118" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="customers.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/customers.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="73" column="79" selection-start="3946" selection-end="3946" vertical-scroll-proportion="-35.96154">
+              <folding>
+                <marker date="1389378106970" expanded="true" signature="1342:1354" placeholder="{...}" />
+                <marker date="1389378106970" expanded="true" signature="2004:2014" placeholder="{...}" />
+                <marker date="1389378106970" expanded="true" signature="3185:3196" placeholder="{...}" />
+                <marker date="1389378106970" expanded="true" signature="3403:3458" placeholder="{...}" />
+                <marker date="1389378106970" expanded="true" signature="3740:3795" placeholder="{...}" />
+                <marker date="1389378106970" expanded="true" signature="4219:4274" placeholder="{...}" />
+                <marker date="1389378106970" expanded="true" signature="4700:4755" placeholder="{...}" />
+                <marker date="1389378106970" expanded="true" signature="5222:5277" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BonussumFacade.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/orders/facade/BonussumFacade.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="8" selection-start="718" selection-end="1342" vertical-scroll-proportion="0.7467412">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shopcart.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/shopcart.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="60" column="60" selection-start="2937" selection-end="2937" vertical-scroll-proportion="-7.8461537">
+              <folding>
+                <marker date="1386615872511" expanded="true" signature="2152:2163" placeholder="{...}" />
+                <marker date="1386615872511" expanded="true" signature="2847:2857" placeholder="{...}" />
+                <marker date="1386615872511" expanded="true" signature="2976:3003" placeholder="{...}" />
+                <marker date="1386615872511" expanded="true" signature="3250:3260" placeholder="{...}" />
+                <marker date="1386615872511" expanded="true" signature="3453:3463" placeholder="{...}" />
+                <marker date="1386615872511" expanded="true" signature="3689:3701" placeholder="{...}" />
+                <marker date="1386615872511" expanded="true" signature="4019:4029" placeholder="{...}" />
+                <marker date="1386615872511" expanded="true" signature="4921:4933" placeholder="{...}" />
+                <marker date="1386615872511" expanded="true" signature="5242:5254" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProposalController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/orders/controllers/ProposalController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="3" selection-start="1020" selection-end="1103" vertical-scroll-proportion="-4.36">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/orders/controllers/ItemController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="230" column="7" selection-start="7594" selection-end="7802" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Product.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/orders/entity/Product.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="0" selection-start="104" selection-end="136" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="persistence.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="36" selection-start="142" selection-end="150" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractFacade.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/orders/facade/AbstractFacade.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="22" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="orders.relevantproducts" pinned="false" current="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/3e42c4f6/d8c16dc5-bfaa-48bf-885f-d26f72b27934/orders..relevantproducts">
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="dbtable:/3e42c4f6/d8c16dc5-bfaa-48bf-885f-d26f72b27934/orders..sequence_table" />
+        <option value="$PROJECT_DIR$/src/com/orders/controllers/ProposalController.java" />
+        <option value="$PROJECT_DIR$/src/com/orders/controllers/OrdersController.java" />
+        <option value="$PROJECT_DIR$/web/ecorescategories.xhtml" />
+        <option value="$PROJECT_DIR$/web/users.xhtml" />
+        <option value="$PROJECT_DIR$/src/com/orders/controllers/BonusController.java" />
+        <option value="$PROJECT_DIR$/web/customers.xhtml" />
+        <option value="$PROJECT_DIR$/src/com/orders/controllers/UserController.java" />
+        <option value="$PROJECT_DIR$/src/org/datamodel/ProductDataModel.java" />
+        <option value="$PROJECT_DIR$/src/com/orders/facade/RelevantprodFacade.java" />
+        <option value="$PROJECT_DIR$/web/proposal.xhtml" />
+        <option value="$PROJECT_DIR$/src/org/datamodel/RelevantProductsModel.java" />
+        <option value="$PROJECT_DIR$/web/items.xhtml" />
+        <option value="$PROJECT_DIR$/src/com/orders/controllers/ItemController.java" />
+        <option value="$PROJECT_DIR$/web/administration.xhtml" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <OptionsSetting value="true" id="Undo Check Out" />
+    <OptionsSetting value="true" id="Get Latest Version" />
+    <ConfirmationsSetting value="1" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Orders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Orders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Orders_23112013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Orders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Orders_23112013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Orders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Orders_23112013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Orders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Orders_23112013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Orders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Orders_23112013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Orders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Orders_23112013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="orders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Orders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Orders_23112013" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="orders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="facade" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Lucene/lucene-core-3.1.0.jar!/" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="Database.TableEditor.Splitter" value="0.92261904" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="Downloaded.Files.Path" value="C:\Projects\Java\Projects\Orders\lib" />
+    <property name="dynamic.classpath" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projects\Java\Projects\Orders_23112013\web\resources\css\img" />
+      <recent name="C:\Projects\Java\Projects\Orders\web\resources\css\img" />
+      <recent name="C:\Projects\Java\Projects\Orders\web\WEB-INF" />
+      <recent name="C:\Projects\Java\Projects\Orders\web" />
+      <recent name="C:\Projects\Java\Projects\Orders\lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projects\Java\Projects\Orders\web" />
+      <recent name="C:\Projects\Java\Projects\Orders\web\resources" />
+      <recent name="C:\Projects\Java\Projects\Orders\web\resources\css" />
+      <recent name="C:\Projects\Java\Projects\Orders\web\WEB-INF" />
+      <recent name="C:\Projects\Java\Projects\Orders\src\META-INF\resources\css" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="org.orders.entity" />
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Glassfish Server.Glassfish">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GoogleAppEngineDevServer" factoryName="Local" APPLICATION_SERVER_NAME="AppEngine Dev">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8083" />
+      <server-settings>
+        <option name="artifact" value="Orders:war exploded" />
+        <option name="port" value="8083" />
+      </server-settings>
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Orders:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="GlassfishConfiguration" factoryName="Local">
+      <deployment />
+      <server-settings>
+        <option name="DOMAIN" value="" />
+        <option name="PRESERVE" value="false" />
+        <option name="VIRTUAL_SERVER" />
+        <option name="USERNAME" value="admin" />
+        <option name="PASSWORD" value="" />
+      </server-settings>
+      <predefined_log_file id="GlassFish" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Java" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="org.test.TestCompile" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Orders" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Glassfish" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="Glassfish 3.1.2.2">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Orders" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <deployment>
+        <artifact name="Orders:war exploded">
+          <settings />
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="DOMAIN" value="domain1" />
+        <option name="PRESERVE" value="false" />
+        <option name="VIRTUAL_SERVER" />
+        <option name="USERNAME" value="admin" />
+        <option name="PASSWORD" value="" />
+      </server-settings>
+      <predefined_log_file id="GlassFish" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Cover" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="9009" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Orders:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="false" name="Google AppEngine" type="GoogleAppEngineDevServer" factoryName="Local" APPLICATION_SERVER_NAME="AppEngine Dev">
+      <server-settings>
+        <option name="artifact" value="Orders:war exploded" />
+        <option name="port" value="8083" />
+      </server-settings>
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper VM_VAR="" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Orders:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="false" name="Tomcat 7.0" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/orders" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <deployment>
+        <artifact name="Orders:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_7_0_Orders" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Cover" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51387" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Orders:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Application.Java" />
+      <item index="1" class="java.lang.String" itemvalue="Glassfish Server.Glassfish" />
+      <item index="2" class="java.lang.String" itemvalue="Google AppEngine Dev Server.Google AppEngine" />
+      <item index="3" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 7.0" />
+    </list>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_MODE" value="false" />
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
+    <option name="ACTIVE_ACTIONS" value="ALPHA_COMPARATOR" />
+  </component>
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="true" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <configuration useDefault="false">C:\Users\stum\AppData\Roaming\Subversion</configuration>
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="C:\Projects\Java\Projects\Orders_23112013" />
+          <option name="myCopyRoot" value="C:\Projects\Java\Projects\Orders_23112013" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="C:\Projects\Java\Projects\Orders_23112013\.idea" />
+          <option name="myCopyRoot" value="C:\Projects\Java\Projects\Orders_23112013\.idea" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="C:\Projects\Java\Projects\Orders_23112013" />
+          <option name="myCopyRoot" value="C:\Projects\Java\Projects\Orders_23112013" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="58407f41-33ee-43de-8bc3-d5b3af9beaa9" name="Default" comment="" />
+      <created>1381516113292</created>
+      <updated>1381516113292</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6421233" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2621212" sideWeight="0.6934931" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32272726" sideWeight="0.6626712" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37328768" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6267123" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24772727" sideWeight="0.36130136" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.63869864" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.67979455" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11130137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2128788" sideWeight="0.5565069" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24015151" sideWeight="0.36130136" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989726" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5291096" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
+    <option name="LIMIT_HISTORY" value="true" />
+    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
+    <option name="UPDATE_FILTER_SCOPE_NAME" />
+    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
+    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
+    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 23/11/2013" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="ok" />
+    <MESSAGE value="second commit" />
+    <MESSAGE value="first commit" />
+    <MESSAGE value="update 23/11/2013" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="33" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.6172608">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3e42c4f6/d8c16dc5-bfaa-48bf-885f-d26f72b27934/orders..relevantproducts">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/orders/facade/CompanyFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="9" selection-start="252" selection-end="462" vertical-scroll-proportion="0.45698926">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/test.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="64" selection-start="1496" selection-end="1792" vertical-scroll-proportion="0.31954888">
+          <folding>
+            <marker date="1385191545983" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1385191545983" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1385191545983" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1385191545983" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1385191545983" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1385191545983" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1385191545983" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1385191545983" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1385191545983" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1385191545983" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1385191545983" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1385191545983" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1385191545983" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1385191545983" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1385191545983" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1385191545983" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1385191545983" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/orders/facade/AbstractFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="22" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="36" selection-start="142" selection-end="150" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/orders/entity/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="104" selection-end="136" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/orders/controllers/ItemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="230" column="7" selection-start="7594" selection-end="7802" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/shopcart.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="60" selection-start="2937" selection-end="2937" vertical-scroll-proportion="-7.8461537">
+          <folding>
+            <marker date="1386615872511" expanded="true" signature="2152:2163" placeholder="{...}" />
+            <marker date="1386615872511" expanded="true" signature="2847:2857" placeholder="{...}" />
+            <marker date="1386615872511" expanded="true" signature="2976:3003" placeholder="{...}" />
+            <marker date="1386615872511" expanded="true" signature="3250:3260" placeholder="{...}" />
+            <marker date="1386615872511" expanded="true" signature="3453:3463" placeholder="{...}" />
+            <marker date="1386615872511" expanded="true" signature="3689:3701" placeholder="{...}" />
+            <marker date="1386615872511" expanded="true" signature="4019:4029" placeholder="{...}" />
+            <marker date="1386615872511" expanded="true" signature="4921:4933" placeholder="{...}" />
+            <marker date="1386615872511" expanded="true" signature="5242:5254" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/orders/controllers/ProposalController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="3" selection-start="1020" selection-end="1103" vertical-scroll-proportion="-4.36">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/items.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="41" selection-start="6271" selection-end="6271" vertical-scroll-proportion="-44.0">
+          <folding>
+            <marker date="1389476878700" expanded="true" signature="1318:1330" placeholder="{...}" />
+            <marker date="1389476878700" expanded="true" signature="2579:2590" placeholder="{...}" />
+            <marker date="1389476878700" expanded="true" signature="2799:2854" placeholder="{...}" />
+            <marker date="1389476878700" expanded="true" signature="3062:3117" placeholder="{...}" />
+            <marker date="1389476878700" expanded="true" signature="3658:3670" placeholder="{...}" />
+            <marker date="1389476878700" expanded="true" signature="4670:4682" placeholder="{...}" />
+            <marker date="1389476878700" expanded="true" signature="6547:6555" placeholder="{...}" />
+            <marker date="1389476878700" expanded="true" signature="6646:6655" placeholder="{...}" />
+            <marker date="1389476878700" expanded="true" signature="6839:6848" placeholder="{...}" />
+            <marker date="1389476878700" expanded="true" signature="7092:7118" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/orders/controllers/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="44" selection-start="2424" selection-end="2440" vertical-scroll-proportion="0.36499068">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/orders/facade/UserFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="201" selection-end="201" vertical-scroll-proportion="0.18994413">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/orders/facade/ProductFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="201" selection-end="201" vertical-scroll-proportion="0.15828678">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/customers.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="79" selection-start="3946" selection-end="3946" vertical-scroll-proportion="-35.96154">
+          <folding>
+            <marker date="1389378106970" expanded="true" signature="1342:1354" placeholder="{...}" />
+            <marker date="1389378106970" expanded="true" signature="2004:2014" placeholder="{...}" />
+            <marker date="1389378106970" expanded="true" signature="3185:3196" placeholder="{...}" />
+            <marker date="1389378106970" expanded="true" signature="3403:3458" placeholder="{...}" />
+            <marker date="1389378106970" expanded="true" signature="3740:3795" placeholder="{...}" />
+            <marker date="1389378106970" expanded="true" signature="4219:4274" placeholder="{...}" />
+            <marker date="1389378106970" expanded="true" signature="4700:4755" placeholder="{...}" />
+            <marker date="1389378106970" expanded="true" signature="5222:5277" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/orders/facade/BonussumFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="8" selection-start="718" selection-end="1342" vertical-scroll-proportion="0.7467412">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>Orders:war exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>JPA</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>aspectj-1.7.4</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>JSF|Web|Orders</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Java EE 6-Java EE 6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <persistence-unit name="OrdersPU" transaction-type="JTA">
+
+        <jta-data-source>jdbc/mysql</jta-data-source>
+       <!-- <class>org.orders.entity.Ecorescategory</class>-->
+        <!--<class>org.orders.entity.Company</class>
+        <class>org.orders.entity.Carousel</class>
+        <class>org.orders.entity.Ecorescategory</class>
+        <class>org.orders.entity.Ecoresproductcategory</class>
+        <class>org.orders.entity.Product</class>-->
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <properties>
+            <property name="eclipselink.temporal.mutable"
+                      value="true" />
+        </properties>
+
+    </persistence-unit>
+</persistence>

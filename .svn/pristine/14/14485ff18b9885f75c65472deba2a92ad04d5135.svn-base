@@ -1,0 +1,133 @@
+package org.orders.entity;
+
+import java.util.Date;
+
+public class Proposal {
+     private String proposalId;
+     private String description;
+     //ссылка на товарную позицию
+     private Product product;
+     //цена за единицу товара
+     private Double price;
+     //мин. количество по заказу клиента
+     private Double minQty;
+     //общее количество по предложению
+     private Double qty;
+     //доступное количество для заказа, остаток по предложению
+     private Double startQty;
+     private String deliveryTerms;
+     //Дата поставки товара
+     private Date deliveryDate;
+     private String paymentTerms;
+     //Флаг для блокировки предложения в магазине, в этом случае предложение не видно на форме Shop.xhtml
+     private Boolean blocked;
+     //Флаг для контроля того что преложени полностью выбрано клиентами
+     private Boolean fullFilled;
+    //Флаг для указания что предложение является акцией, скидкой
+     private Boolean promo;
+
+    public Proposal() {
+    }
+
+
+    public String getProposalId() {
+        return proposalId;
+    }
+
+    public void setProposalId(String proposalId) {
+        this.proposalId = proposalId;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public Double getQty() {
+        return qty;
+    }
+
+    public void setQty(Double qty) {
+        this.qty = qty;
+    }
+
+    public Double getStartQty() {
+        return startQty;
+    }
+
+    public void setStartQty(Double startQty) {
+        this.startQty = startQty;
+    }
+
+    public String getDeliveryTerms() {
+        return deliveryTerms;
+    }
+
+    public void setDeliveryTerms(String deliveryTerms) {
+        this.deliveryTerms = deliveryTerms;
+    }
+
+    public Date getDeliveryDate() {
+        return deliveryDate;
+    }
+
+    public void setDeliveryDate(Date deliveryDate) {
+        this.deliveryDate = deliveryDate;
+    }
+
+    public String getPaymentTerms() {
+        return paymentTerms;
+    }
+
+    public void setPaymentTerms(String paymentTerms) {
+        this.paymentTerms = paymentTerms;
+    }
+
+    public Double getMinQty() {
+        return minQty;
+    }
+
+    public void setMinQty(Double minQty) {
+        this.minQty = minQty;
+    }
+
+    public Boolean getBlocked() {
+        return blocked;
+    }
+
+    public void setBlocked(Boolean blocked) {
+        this.blocked = blocked;
+    }
+
+
+    public void setFullFilled(Boolean fullFilled) {
+        this.fullFilled = fullFilled;
+    }
+
+    public Boolean getPromo() {
+        return promo;
+    }
+
+    public void setPromo(Boolean promo) {
+        this.promo = promo;
+    }
+}

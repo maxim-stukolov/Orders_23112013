@@ -1,0 +1,263 @@
+package com.orders.controllers;
+
+import com.orders.facade.EcorescategoryFacade;
+import com.orders.facade.EcoresproductcategoryFacade;
+import com.orders.facade.ProductFacade;
+import org.orders.entity.*;
+import org.primefaces.event.NodeSelectEvent;
+import org.primefaces.model.DefaultTreeNode;
+import org.primefaces.model.TreeNode;
+
+import javax.annotation.PostConstruct;
+import javax.ejb.EJB;
+import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Logger;
+
+@ManagedBean(name="ecorescategoryController")
+@SessionScoped
+public class EcorescategoryController {
+
+    private static Logger log = Logger.getLogger(EcorescategoryController.class.getName());
+    private List<Ecorescategory> ecorescategories;
+    private List<Ecoresproductcategory> ecoresproductcategories;
+    private Ecoresproductcategory[] selectedProductcategories;
+
+    private List<SelectedProduct> selectedProducts;
+    private ProductsDataModel productsDataModel;
+
+    private Ecorescategory selected;
+    private TreeNode root;
+    private TreeNode selectedNode;
+    @EJB
+    private EcorescategoryFacade ecorescategoryFacade;
+    @EJB
+    private EcoresproductcategoryFacade ecoresproductcategoryFacade;
+    @EJB
+    private ProductFacade productFacade;
+
+    @PostConstruct
+    public void init(){
+        ecorescategories = new ArrayList<Ecorescategory>();
+        selectedProducts = new ArrayList<SelectedProduct>();
+        ecoresproductcategories = new ArrayList<Ecoresproductcategory>();
+
+        if(!productFacade.findAll().isEmpty()){
+            for(Product product : productFacade.findAll()){
+                SelectedProduct selectedProduct = new SelectedProduct();
+                selectedProduct.setProduct(product);
+                selectedProduct.setSelected(false);
+                selectedProducts.add(selectedProduct);
+            }
+
+        }
+        if(!ecorescategoryFacade.findAll().isEmpty()){
+            ecorescategories = ecorescategoryFacade.findAll();
+            selected = ecorescategories.get(0);
+        }else{selected = new Ecorescategory();}
+
+        productsDataModel = new ProductsDataModel(ecoresproductcategories);
+
+        root = new DefaultTreeNode("Root", null);
+        selectedNode = root;
+        buildtree();
+    }
+    public void updateProducts(){
+        selectedProducts.clear();
+        if(!productFacade.findAll().isEmpty()){
+            for(Product product : productFacade.findAll()){
+                SelectedProduct selectedProduct = new SelectedProduct();
+                selectedProduct.setProduct(product);
+                selectedProduct.setSelected(false);
+                selectedProducts.add(selectedProduct);
+            }
+        }
+    }
+
+    public void deleteSelectedProducts(){
+        if(selectedProductcategories == null){
+            addMessage("Массив пустой, удалять нечего!");
+        }else if(selectedProductcategories.length > 0){
+            for(int i = 0; i<= selectedProductcategories.length-1;i++){
+                ecoresproductcategoryFacade.remove(selectedProductcategories[i]);
+            }
+        }
+        ecoresproductcategories = ecoresproductcategoryFacade.findByCategory(selected.getRecid());
+        productsDataModel = new ProductsDataModel(ecoresproductcategories);
+        addMessage("Записи удалены");
+    }
+    public void showSelectedProducts(){
+        if(selectedProductcategories == null){
+            addMessage("Массив ноль");
+        }else if(selectedProductcategories.length > 0){
+            addMessage("Массив содержит элементы");
+            for(int i = 0; i<= selectedProductcategories.length-1;i++){
+                addMessage("Элемент массива:" + selectedProductcategories[i].getProduct());
+            }
+        }
+    }
+
+    public void create(){
+        log.info("Начинаем создавать объект");
+        Ecorescategory category = new Ecorescategory();
+        category.setName("New category");
+        category.setParentrecid(selected.getRecid());
+        ecorescategoryFacade.create(category);
+        TreeNode treeNode = new DefaultTreeNode(category, selectedNode);
+        addMessage("Объект создан!");
+    }
+
+    public void save(){
+        try{
+            ecorescategoryFacade.edit(selected);
+            selected = ecorescategoryFacade.find(selected.getRecid());
+            ecorescategories.clear();
+            ecorescategories = ecorescategoryFacade.findAll();
+            addMessage("Категория сохранена!");
+        }
+        catch (Exception ex){addMessage(ex.getCause().getMessage());}
+    }
+
+    public void delete(){
+        try{
+            log.info("Удаляем объект");
+            TreeNode parent = selectedNode.getParent();
+            parent.getChildren().remove(selectedNode);
+            ecorescategoryFacade.remove(selected);
+            addMessage("Категория удалена!");
+        }
+        catch (Exception ex){addMessage(ex.getCause().getMessage());}
+        ecorescategories = ecorescategoryFacade.findAll();
+        selected = ecorescategories.get(0);
+    }
+
+    public void addProductToCategory(){
+        for(SelectedProduct sProduct : selectedProducts){
+            if(sProduct.getSelected().equals(true)){
+                Ecoresproductcategory ecoresproductcategory = new Ecoresproductcategory();
+                ecoresproductcategory.setProduct(sProduct.getProduct().getRecid().toString());
+                ecoresproductcategory.setCategory(selected.getRecid().toString());
+
+                ecoresproductcategoryFacade.create(ecoresproductcategory);
+                ecoresproductcategories = ecoresproductcategoryFacade.findByCategory(selected.getRecid());
+
+                addMessage("Selected: " + sProduct.getProduct().getRecid());
+            }
+        }
+        productsDataModel = new ProductsDataModel(ecoresproductcategories);
+        setSelectedProductsFalse();
+        addMessage("Продукты связаны");
+    }
+    public void setSelectedProductsFalse(){
+        for(SelectedProduct sProduct : selectedProducts){
+            if(sProduct.getSelected().equals(true)){
+                sProduct.setSelected(false);
+            }
+        }
+    }
+    public void addMessage(String summary) {
+        FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, summary,  null);
+        FacesContext.getCurrentInstance().addMessage(null, message);
+    }
+
+    public List<Ecorescategory> getEcorescategories() {
+        return ecorescategories;
+    }
+
+    public void setEcorescategories(List<Ecorescategory> ecorescategories) {
+        this.ecorescategories = ecorescategories;
+    }
+
+    public Ecorescategory getSelected() {
+        return selected;
+    }
+
+    public void setSelected(Ecorescategory selected) {
+        this.selected = selected;
+    }
+    public void buildtree(){
+        TreeNode main = new DefaultTreeNode(findRoot(), root);
+        log.info("Создана root-категория:" + findRoot().getName());
+        for(Ecorescategory ecorescategory : ecorescategoryFacade.findAll()){
+            if(ecorescategory.getParentrecid() == findRoot().getRecid()){
+                TreeNode node = new DefaultTreeNode(ecorescategory, main);
+                log.info("Создана категория 1 уровня:" + ecorescategory.getName());
+                findChildrenRows(ecorescategory.getRecid(), node);
+            }
+        }
+    }
+    public Ecorescategory findRoot(){
+        for(Ecorescategory ecorescategory : ecorescategoryFacade.findAll()){
+            if(ecorescategory.getParentrecid() == 0)
+                {return ecorescategory;}
+        }
+        return null;
+    }
+    public void findChildrenRows(Long parent, TreeNode rootNode)
+    {
+        for(Ecorescategory category: ecorescategoryFacade.findAll()){
+            if(category.getParentrecid().equals(parent)){
+                TreeNode treeNode = new DefaultTreeNode(category, rootNode);
+                findChildrenRows(category.getRecid(), treeNode);
+            }
+        }
+    }
+    public void onNodeSelect(NodeSelectEvent event) {
+        selected = (Ecorescategory)event.getTreeNode().getData();
+        ecoresproductcategories = ecoresproductcategoryFacade.findByCategory(selected.getRecid());
+        productsDataModel = new ProductsDataModel(ecoresproductcategories);
+        addMessage(selected.getRecid() + ", " + selected.getName());
+    }
+    public TreeNode getRoot() {
+        return root;
+    }
+
+    public TreeNode getSelectedNode() {
+        return selectedNode;
+    }
+
+    public void setSelectedNode(TreeNode selectedNode) {
+        this.selectedNode = selectedNode;
+    }
+
+    public List<Ecoresproductcategory> getEcoresproductcategories() {
+        return ecoresproductcategories;
+    }
+
+    public void setEcoresproductcategories(List<Ecoresproductcategory> ecoresproductcategories) {
+        this.ecoresproductcategories = ecoresproductcategories;
+    }
+
+    public List<SelectedProduct> getSelectedProducts() {
+        return selectedProducts;
+    }
+
+    public void setSelectedProducts(List<SelectedProduct> selectedProducts) {
+        this.selectedProducts = selectedProducts;
+    }
+
+    public ProductsDataModel getProductsDataModel() {
+        return productsDataModel;
+    }
+
+    public void setProductsDataModel(ProductsDataModel productsDataModel) {
+        this.productsDataModel = productsDataModel;
+    }
+
+    public Ecoresproductcategory[] getSelectedProductcategories() {
+        return selectedProductcategories;
+    }
+
+    public void setSelectedProductcategories(Ecoresproductcategory[] selectedProductcategories) {
+        this.selectedProductcategories = selectedProductcategories;
+    }
+
+    public String getProductName(String recid){
+        return  productFacade.find(Long.valueOf(recid)).getName();
+    }
+
+}

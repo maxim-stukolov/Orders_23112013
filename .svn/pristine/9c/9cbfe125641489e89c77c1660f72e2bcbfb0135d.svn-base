@@ -1,0 +1,89 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:custom="http://java.sun.com/jsf/composite/composite">
+<h:head>
+
+    <title><ui:insert name="title">Orders</ui:insert></title>
+    <link rel="stylesheet" href="resources/css/theme.css" />
+    <link rel="stylesheet" href="resources/css/m-styles.min.css"/>
+</h:head>
+<f:metadata>
+    <f:viewParam name="backurl" value="#{uiController.backurl}"/>
+</f:metadata>
+<h:body>
+    <ui:param name="root" value="#{request.contextPath}" />
+    <custom:topbar  inputValue="Ваша корзина"
+                    currentPage="shopcart.xhtml"
+                    backButtonAction="#{uiController.setReference('shopcart.xhtml')}"
+                    createButtonAction="#{userController.create}"
+                    saveButtonAction="#{userController.save}"
+                    editButtonAction="#{uiController.edit}"
+                    deleteButtonAction="#{userController.delete}"
+                    searchButtonAction="#{userController.search}"
+            />
+    <h:form id="mainForm">
+        <p:growl id="messages"/>
+
+        <p:fieldset id="selectedProposals" legend="Корзина">
+            <custom:buy id="buyForm"
+                        buyValue="Предложения"
+                        shoppingCart="#{proposalController.shopingCart}"/>
+            <br/>  <br/><br/>
+            <p:outputPanel id="dropArea">
+
+
+
+                <p:dataTable var="data"
+                             value="#{proposalController.shopingCart.shopingCartItemList}"
+                             rendered="#{not empty proposalController.shopingCart.shopingCartItemList}"
+                             selectionMode = "single"
+                             rowKey="#{data.proposal.item.itemId}"
+                             selection="#{proposalController.selectedShopingCartItem}"
+                        >
+                    <p:ajax event="rowSelect" update="@form"/>
+
+                    <p:column headerText="proposalId" rendered="false">
+                        <h:outputText value="#{data.proposal.proposalId}" />
+                    </p:column>
+
+                    <p:column headerText="Фото" style="width: 220px; height: 20px">
+                        <img src="#{root}/resources/content/#{data.proposal.item.itemId}.jpg"
+                             style="width: 300px;height: 200px"/>
+
+                    </p:column>
+
+                    <p:column headerText="позиция" style="width: 250px">
+                        <h:outputText value="#{data.proposal.item.itemName}" styleClass="m-text-medium"/>
+                    </p:column>
+                    <p:column headerText="цена" style="width: 150px">
+                        <h:outputText value="#{data.price}" styleClass="m-text-medium"/>
+                    </p:column>
+                    <p:column headerText="кол-во" style="width: 150px">
+                        <h:outputText value="#{data.qty}" styleClass="m-text-medium"/>
+                    </p:column>
+                    <p:column headerText="сумма" style="width: 150px">
+                        <h:outputText value="#{data.price}" styleClass="m-text-medium"/>
+                    </p:column>
+                    <p:column headerText="Remove" style="width: 100px">
+                        <p:commandButton value="Remove"
+                                         action="#{proposalController.removeItemShoppingCart()}"
+                                         update="@form"/>
+                    </p:column>
+                </p:dataTable>
+
+            </p:outputPanel>
+            <br/>
+
+        </p:fieldset>
+    </h:form>
+
+
+
+
+
+</h:body>
+</html>

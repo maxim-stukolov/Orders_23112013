@@ -1,0 +1,22 @@
+package com.orders.facade;
+
+import org.orders.entity.Ecorescategory;
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+@Stateless
+public class EcorescategoryFacade extends AbstractFacade<Ecorescategory>{
+    @PersistenceContext(unitName = "OrdersPU")
+    private EntityManager em;
+
+    public EntityManager getEntityManager() {
+        return em;
+    }
+
+    public EcorescategoryFacade() {
+        super(Ecorescategory.class);
+    }
+
+}

@@ -1,0 +1,34 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:composite="http://java.sun.com/jsf/composite">
+
+<composite:interface>
+    <composite:attribute name="buyValue"/>
+    <composite:attribute name="currentPage"/>
+    <composite:attribute name="shoppingCart"/>
+    <composite:attribute name="buyButtonAction"
+                         method-signature="java.lang.String action()"/>
+
+</composite:interface>
+
+<composite:implementation>
+    <h:form id="buyForm">
+        <p:growl id="messages"/>
+        <h:outputText value="Сумма заказа: #{proposalController.shopingCart.cartBalance} РУБЛЕЙ" styleClass="m-text-medium">
+            <f:convertNumber currencyCode="RUR" type="currency" minFractionDigits="2" />
+        </h:outputText>
+        <br/>
+        <h:commandButton value="Buy" styleClass="m-btn-metro m-btn-small m-light-blue m-icon-buy"
+                         action="#{ordersController.addOrders(cc.attrs.shoppingCart)}"
+                         update="messages" />
+        <h:commandButton value="Cancel" styleClass="m-btn-metro m-btn-small m-light-blue m-icon-buy-cancel"
+                         action="#{proposalController.clearShoppingCart()}"/>
+
+    </h:form>
+
+</composite:implementation>
+
+</html>

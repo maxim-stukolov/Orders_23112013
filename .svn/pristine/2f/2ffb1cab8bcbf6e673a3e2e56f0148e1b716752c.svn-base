@@ -1,0 +1,32 @@
+package org.orders.entity;
+
+
+public class BonusSetup {
+    private Double ballsTo;
+    private Double amountTo;
+    private Double parameter;
+
+    public Double getBallsTo() {
+        return ballsTo;
+    }
+
+    public void setBallsTo(Double ballsTo) {
+        this.ballsTo = ballsTo;
+    }
+
+    public Double getAmountTo() {
+        return amountTo;
+    }
+
+    public void setAmountTo(Double amountTo) {
+        this.amountTo = amountTo;
+    }
+
+    public Double getParameter() {
+        return ballsTo/amountTo;
+    }
+
+    public void setParameter(Double parameter) {
+        this.parameter = parameter;
+    }
+}

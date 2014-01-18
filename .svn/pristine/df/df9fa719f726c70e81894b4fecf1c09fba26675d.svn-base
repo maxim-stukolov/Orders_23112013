@@ -1,0 +1,139 @@
+package com.orders.controllers;
+
+import org.orders.entity.BonusSetup;
+import org.orders.entity.BonusTrans;
+import org.orders.entity.Customer;
+import org.orders.entity.Order;
+
+import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
+import java.util.ArrayList;
+import java.util.List;
+
+@ManagedBean(name="bonusController")
+@SessionScoped
+public class BonusController {
+    private BonusSetup setup;
+    private List<BonusTrans> transactions;
+    private BonusTrans selected;
+    @ManagedProperty("#{ordersController}")
+    OrdersController ordersController;
+
+    @PostConstruct
+    public void init(){
+        setup = new BonusSetup();
+        setup.setAmountTo(Double.valueOf("10"));
+        setup.setBallsTo(Double.valueOf("100"));
+
+        transactions = new ArrayList<BonusTrans>();
+
+        BonusTrans trans1 = new BonusTrans(Math.random());
+        trans1.setBalls(Double.valueOf("250"));
+        trans1.setAmount(Double.valueOf("250") / setup.getParameter());
+        trans1.setCustomer(new Customer(Long.valueOf("1000")));
+
+        BonusTrans trans2 = new BonusTrans(Math.random());
+        trans2.setBalls(Double.valueOf("350"));
+        trans2.setAmount(Double.valueOf("350") / setup.getParameter());
+        trans2.setCustomer(new Customer(Long.valueOf("2000")));
+
+        BonusTrans trans3 = new BonusTrans(Math.random());
+        trans3.setBalls(Double.valueOf("-350"));
+        trans3.setAmount(Double.valueOf("-350") / setup.getParameter());
+        trans3.setCustomer(new Customer(Long.valueOf("2000")));
+
+        transactions.add(trans1);
+        transactions.add(trans2);
+        transactions.add(trans3);
+
+    }
+
+    public Double getBallsByCustomer(Customer customer){
+        Double balls = 0.00;
+        for(BonusTrans trans : transactions){
+            if(trans.getCustomer() == customer){
+               balls += trans.getBalls();
+            }
+        }
+        return balls;
+    }
+
+    public void payOrderByBonus(Order[] orders){
+        Double totalAmount = 0.0;
+        for(Order order : orders){
+            totalAmount +=order.getAmount();
+        }
+
+        if(totalAmount <= getBallsByCustomer(orders[0].getCustomer())* getSetup().getParameter()){
+                    for(Order order : orders){
+
+                            BonusTrans trans = new BonusTrans(Math.random());
+                            trans.setCustomer(order.getCustomer());
+                            trans.setAmount(-1 * order.getAmount());
+                            trans.setBalls(-1 * order.getAmount() / getSetup().getParameter());
+                            transactions.add(trans);
+
+                            order.setStatus("Оплачен Бонусами");
+                    }
+            addMessage("Заказ оплачен бонусами");
+        }else{
+            addMessage("Не достаточно бонусов для оплаты");
+        }
+
+    }
+    public void fillBonusTrans(String status){
+        int i = 0;
+        for(Order order : ordersController.getOrderList()){
+            if(order.getStatus().equals(status) && order.getBonus() == false){
+                BonusTrans trans = new BonusTrans(Math.random());
+                trans.setCustomer(order.getCustomer());
+                trans.setAmount(order.getAmount());
+                trans.setBalls(order.getAmount() / setup.getParameter());
+                transactions.add(trans);
+                ordersController.setBonusTrue(order);
+                i++;
+            }
+        }
+        addMessage("Бонусные проводки обновлены:" + i);
+    }
+    public BonusSetup getSetup() {
+        return setup;
+    }
+
+    public void setSetup(BonusSetup setup) {
+        this.setup = setup;
+    }
+
+    public List<BonusTrans> getTransactions() {
+        return transactions;
+    }
+
+    public void setTransactions(List<BonusTrans> transactions) {
+        this.transactions = transactions;
+    }
+
+    public BonusTrans getSelected() {
+        return selected;
+    }
+
+    public void setSelected(BonusTrans selected) {
+        this.selected = selected;
+    }
+
+    public OrdersController getOrdersController() {
+        return ordersController;
+    }
+
+    public void setOrdersController(OrdersController ordersController) {
+        this.ordersController = ordersController;
+    }
+
+    public void addMessage(String summary) {
+        FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, summary,  null);
+        FacesContext.getCurrentInstance().addMessage(null, message);
+    }
+}

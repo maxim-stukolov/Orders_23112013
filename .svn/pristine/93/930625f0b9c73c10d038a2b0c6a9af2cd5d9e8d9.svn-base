@@ -1,0 +1,180 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:custom="http://java.sun.com/jsf/composite/composite">
+<h:head>
+
+    <title><ui:insert name="title">Orders</ui:insert></title>
+    <link rel="stylesheet" href="resources/css/theme.css" />
+    <link rel="stylesheet" href="resources/css/m-styles.min.css"/>
+
+
+
+</h:head>
+
+<h:body>
+
+    <custom:topbar  inputValue="Предложения"
+                    currentPage="proposal.xhtml"
+                    backButtonAction="#{uiController.setReference('proposal.xhtml')}"
+                    createButtonAction="#{itemController.create}"
+                    editButtonAction="#{uiController.edit(uiController.editForm)}"
+                    deleteButtonAction="#{itemController.delete}"
+                    searchButtonAction="#{itemController.search}"
+
+            />
+
+
+
+
+    <h:form id="shopForm">
+        <p:growl id="messages"/>
+
+        <p:panelGrid columns="4" style="border: 0px" rendered="true">
+
+            <p:commandButton value="Блокировать"
+                             action="#{proposalController.setBlocked()}"
+                             update="@form" style="width: 200px"/>
+            <p:commandButton value="Акция"
+                             action="#{proposalController.setPromoAction()}"
+                             update="@form" style="width: 200px"/>
+            <p:commandButton value="Обновить"
+                             action="#{proposalController.refresh()}"
+                             update="@form" style="width: 200px"/>
+
+        </p:panelGrid>
+        <p:panelGrid columns="2" columnClasses="alignTop,alignTop" style="width: 100%;">
+        <p:fieldset legend="Табличная часть" styleClass="myFieldset" rendered="#{not uiController.editForm}">
+
+            <p:dataTable var="data"
+                         value="#{proposalController.proposalList}"
+                         selectionMode = "single"
+                         rowKey="#{data.proposalId}"
+                         selection="#{proposalController.selectedProposal}"
+                    >
+                <p:ajax event="rowSelect" update=":shopForm:messages, @form"/>
+
+                <p:column headerText="Заблокировано" style="width: 50px">
+                    <h:selectBooleanCheckbox value="#{data.blocked}" style="width: 25px;height: 25px">
+                        <p:ajax update="@form"/>
+                    </h:selectBooleanCheckbox>
+                </p:column>
+
+
+                <p:column headerText="Промо" style="width: 50px">
+                    <h:selectBooleanCheckbox value="#{data.promo}" style="width: 25px;height: 25px">
+                        <p:ajax update="@form"/>
+                    </h:selectBooleanCheckbox>
+                </p:column>
+
+                <p:column headerText="Код предложения" style="width: 50px">
+                    <h:outputText value="#{data.proposalId}" />
+                </p:column>
+
+                <p:column headerText="Товар">
+                    <h:outputText value="#{data.product.recid}" />
+                </p:column>
+                <p:column headerText="Цена">
+                    <h:outputText value="#{data.price}" />
+                </p:column>
+                <p:column headerText="кол-во">
+                    <h:outputText value="#{data.qty}" />
+                </p:column>
+                <p:column headerText="Нач. кол-во">
+                    <h:outputText value="#{data.startQty}" />
+                </p:column>
+                <p:column headerText="Заказано">
+                    <h:outputText value="#{ordersController.getOrderedQtyOnProposal(data)}" />
+                </p:column>
+                <p:column headerText="Заполнение">
+                    <h:outputText value="#{ordersController.getFillPercent(data)}">
+                        <f:convertNumber type="percent" />
+                    </h:outputText>
+                </p:column>
+            </p:dataTable>
+
+
+        </p:fieldset>
+
+        <p:fieldset id="selectedProposals" legend="Форма" rendered="#{uiController.editForm}">
+
+            <p:panelGrid columns="2" style="border: 0px">
+                <h:outputLabel value="Блокировка:" styleClass="m-text-medium"/>
+                <h:selectBooleanCheckbox value="#{proposalController.selectedProposal.blocked}"
+                                         style="width: 25px;height: 25px">
+                    <p:ajax update="@form" listener="#{proposalController.buildAvailableProposals()}"/>
+                </h:selectBooleanCheckbox>
+
+                <h:outputLabel value="Промо:" styleClass="m-text-medium"/>
+                <h:selectBooleanCheckbox value="#{proposalController.selectedProposal.promo}" style="width: 25px;height: 25px">
+                    <p:ajax update="@form"/>
+                </h:selectBooleanCheckbox>
+
+                <h:outputLabel value="Код предложения:" styleClass="m-text-medium"/>
+                <p:inputText value="#{proposalController.selectedProposal.proposalId}"
+                             style="font: Segoe; font-size:24px; width: 350px; height: 40px"
+                             rendered="#{uiController.editForm}"/>
+                <h:outputText value="#{proposalController.selectedProposal.proposalId}"
+                              style="font: Segoe; font-size:24px; width: 350px; height: 40px"
+                              rendered="#{not uiController.editForm}"  />
+
+                <h:outputLabel value="Имя номенклатуры:" styleClass="m-text-medium"/>
+                <p:inputText value="#{proposalController.selectedProposal.item.itemName}"
+                             style="font: Segoe; font-size:24px; width: 350px; height: 40px"
+                             rendered="#{uiController.editForm}"/>
+                <h:outputText value="#{proposalController.selectedProposal.item.itemName}"
+                              style="font: Segoe; font-size:24px; width: 350px; height: 40px"
+                              rendered="#{not uiController.editForm}"  />
+
+                <h:outputLabel value="Цена:" styleClass="m-text-medium"/>
+                <p:inputText value="#{proposalController.selectedProposal.price}"
+                             style="font: Segoe; font-size:24px; width: 350px; height: 40px"
+                             rendered="#{uiController.editForm}"/>
+                <h:outputText value="#{proposalController.selectedProposal.price}"
+                              style="font: Segoe; font-size:24px; width: 350px; height: 40px"
+                              rendered="#{not uiController.editForm}"  />
+
+                <h:outputLabel value="Мин. кол-во:" styleClass="m-text-medium"/>
+                <p:inputText value="#{proposalController.selectedProposal.qty}"
+                             style="font: Segoe; font-size:24px; width: 350px; height: 40px"
+                             rendered="#{uiController.editForm}"/>
+                <h:outputText value="#{proposalController.selectedProposal.qty}"
+                              style="font: Segoe; font-size:24px; width: 350px; height: 40px"
+                              rendered="#{not uiController.editForm}"  />
+
+                <h:outputLabel value="Начальное кол-во:" styleClass="m-text-medium"/>
+                <p:inputText value="#{proposalController.selectedProposal.startQty}"
+                             style="font: Segoe; font-size:24px; width: 350px; height: 40px"
+                             rendered="#{uiController.editForm}"/>
+                <h:outputText value="#{proposalController.selectedProposal.startQty}"
+                              style="font: Segoe; font-size:24px; width: 350px; height: 40px"
+                              rendered="#{not uiController.editForm}"  />
+
+                <ui:param name="root" value="#{request.contextPath}" />
+                <img src="#{root}/resources/content/#{proposalController.selectedProposal.item.itemId}.jpg" style="width: 300px;height: 200px"/>
+                <br/>
+
+                <p:editor value="#{proposalController.selectedProposal.description}" controls="bold italic underline strikethrough"
+                          rendered="#{uiController.editForm}" style="height: 300px; width: 500px"/>
+                <h:outputText value="#{proposalController.selectedProposal.description}"
+                              rendered="#{not uiController.editForm}" />
+
+            </p:panelGrid>
+
+
+
+        </p:fieldset>
+
+
+        </p:panelGrid>
+
+    </h:form>
+
+
+
+
+</h:body>
+</html>

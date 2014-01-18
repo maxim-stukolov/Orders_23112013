@@ -1,0 +1,187 @@
+package com.orders.controllers;
+
+import org.orders.entity.Proposal;
+import org.orders.entity.ShopingCart;
+import org.orders.entity.ShopingCartItem;
+import org.primefaces.event.DragDropEvent;
+
+import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+@ManagedBean(name="proposalController")
+@SessionScoped
+public class ProposalController implements Serializable {
+
+    private List<Proposal> proposalList;
+    private List<Proposal> availableProposals;
+    private List<Proposal> droppedProposal;
+    private ShopingCart shopingCart;
+    private Double shoppingCartBalance;
+    private Proposal selectedProposal;
+    private ShopingCartItem selectedShopingCartItem;
+    @ManagedProperty("#{itemController}")
+    ItemController itemController;
+
+
+    @PostConstruct
+    public void init(){
+        FacesContext.getCurrentInstance().getExternalContext().getSession(true);
+        proposalList = new ArrayList<Proposal>();
+        availableProposals = new ArrayList<Proposal>();
+        droppedProposal = new ArrayList<Proposal>();
+        //Иницилизация корзины покупателя
+        shopingCart = new ShopingCart();
+
+        shoppingCartBalance = Double.valueOf("0");
+
+        Proposal proposal1 = new Proposal();
+        proposal1.setProposalId("100");
+        proposal1.setProduct(itemController.getProducts().get(0));
+        proposal1.setPrice(Double.valueOf("100"));
+        proposal1.setQty(Double.valueOf("10"));
+        proposal1.setStartQty(Double.valueOf("65"));
+        proposal1.setMinQty(Double.valueOf("5"));
+        proposal1.setDescription("ПРИВЕТ РОМАШКИ! Отличная икра!");
+        proposal1.setBlocked(true);
+
+
+        Proposal proposal2 = new Proposal();
+        proposal2.setProposalId("200");
+        proposal2.setProduct(itemController.getProducts().get(1));
+        proposal2.setPrice(Double.valueOf("150"));
+        proposal2.setQty(Double.valueOf("10"));
+        proposal2.setStartQty(Double.valueOf("65"));
+        proposal2.setMinQty(Double.valueOf("3"));
+        proposal2.setDescription("ПРИВЕТ РОМАШКИ! Отличная икра!");
+        proposal2.setBlocked(false);
+        proposal2.setPromo(true);
+
+        Proposal proposal3 = new Proposal();
+        proposal3.setProposalId("300");
+        proposal3.setProduct(itemController.getProducts().get(2));
+        proposal3.setPrice(Double.valueOf("200"));
+        proposal3.setQty(Double.valueOf("10"));
+        proposal3.setStartQty(Double.valueOf("65"));
+        proposal3.setMinQty(Double.valueOf("10"));
+        proposal3.setDescription("ПРИВЕТ РОМАШКИ! Отличная икра!");
+        proposal3.setBlocked(false);
+
+
+        proposalList.add(proposal1);
+        proposalList.add(proposal2);
+        proposalList.add(proposal3);
+
+    }
+
+
+    public List<Proposal> getAvailableProposals() {
+        return availableProposals;
+    }
+
+    public void setAvailableProposals(List<Proposal> availableProposals) {
+        this.availableProposals = availableProposals;
+    }
+
+    public void setBlocked(){
+        selectedProposal.setBlocked(true);
+    }
+    public void setPromoAction(){
+        selectedProposal.setPromo(true);
+    }
+    public void refresh(){
+        addMessage("Обновлено");
+    }
+    public void setShoppingCartBalance(Double shoppingCartBalance) {
+        this.shoppingCartBalance = shoppingCartBalance;
+    }
+
+    public Proposal getSelectedProposal() {
+        return selectedProposal;
+    }
+
+    public void setSelectedProposal(Proposal selectedProposal) {
+        this.selectedProposal = selectedProposal;
+    }
+
+    public void addItemShoppingCart(Proposal proposal){
+        if(proposal.getQty() > proposal.getMinQty()){
+            shopingCart.insertItem(proposal);
+            selectedShopingCartItem = shopingCart.getLastItem();
+            addMessage("Добавлено в корзину" + proposal.getQty());
+        }else{
+            addMessage("Количесво меньше чем минимальное по предложению");
+        }
+    }
+    public void removeItemShoppingCart(){
+        shopingCart.removeItem(selectedShopingCartItem);
+
+        if(shopingCart.isEmpty()){
+            selectedShopingCartItem = shopingCart.getFirstItem();
+        }
+        addMessage("Позиция удалена из корзины!");
+    }
+    public void blockProposal(){
+        addMessage("Предложение заблокировано");
+    }
+    public void clearShoppingCart(){
+        shopingCart.clear();
+        addMessage("Корзина очищена!");
+    }
+
+    public List<Proposal> getProposalList() {
+        return proposalList;
+    }
+
+    public void setProposalList(List<Proposal> proposalList) {
+        this.proposalList = proposalList;
+    }
+
+    public List<Proposal> getDroppedProposal() {
+        return droppedProposal;
+    }
+
+    public void setDroppedProposal(List<Proposal> droppedProposal) {
+        this.droppedProposal = droppedProposal;
+    }
+    public void onProposalDrop(DragDropEvent ddEvent) {
+        Proposal proposal = ((Proposal) ddEvent.getData());
+        addItemShoppingCart(proposal);
+    }
+    public void addMessage(String summary) {
+        FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, summary,  null);
+        FacesContext.getCurrentInstance().addMessage(null, message);
+    }
+
+    public ShopingCart getShopingCart() {
+        return shopingCart;
+    }
+
+    public void setShopingCart(ShopingCart shopingCart) {
+        this.shopingCart = shopingCart;
+    }
+
+    public ShopingCartItem getSelectedShopingCartItem() {
+        return selectedShopingCartItem;
+    }
+
+    public void setSelectedShopingCartItem(ShopingCartItem selectedShopingCartItem) {
+        this.selectedShopingCartItem = selectedShopingCartItem;
+    }
+
+    public ItemController getItemController() {
+        return itemController;
+    }
+
+    public void setItemController(ItemController itemController) {
+        this.itemController = itemController;
+    }
+
+
+}

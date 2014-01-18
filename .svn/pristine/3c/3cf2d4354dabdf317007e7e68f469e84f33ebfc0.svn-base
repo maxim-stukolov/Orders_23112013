@@ -1,0 +1,160 @@
+package com.orders.controllers;
+
+
+import com.orders.facade.UserFacade;
+import org.orders.entity.Customer;
+import org.orders.entity.UsersE;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
+import javax.ejb.EJB;
+import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
+import javax.transaction.UserTransaction;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Logger;
+
+@ManagedBean(name="userController")
+@SessionScoped
+public class UserController {
+
+    //private List<UsersEntity> usersList;
+    private List<UsersE> usersList;
+    private UsersE selected;
+    private List<Customer> customerList;
+    private Customer selectedCustomer;
+    private static Logger log = Logger.getLogger(UserController.class.getName());
+
+    @EJB
+    private com.orders.facade.UserFacade userFacade;
+
+    @Resource
+    UserTransaction utx;
+
+    public UserController() {
+    }
+    @PostConstruct
+    public void init(){
+        //FacesContext.getCurrentInstance().getExternalContext().getSession(true);
+        usersList = new ArrayList<UsersE>();
+        if(!userFacade.findAll().isEmpty()){
+            usersList = userFacade.findAll();
+            selected = usersList.get(0);
+        }else{selected = new UsersE();}
+
+
+        Customer customer1 = new Customer();
+        customer1.setCustomerId(Long.valueOf("100"));
+        customer1.setSurname("Stukolov");
+        customer1.setName("Maxim");
+        customer1.setUser("Admin");
+
+        Customer customer2 = new Customer();
+        customer2.setCustomerId(Long.valueOf("200"));
+        customer2.setSurname("Ivanov");
+        customer2.setName("Petr");
+        customer2.setUser("Customer");
+
+        customerList = new ArrayList<Customer>();
+        customerList.add(customer1);
+        customerList.add(customer2);
+        selectedCustomer = customerList.get(0);
+        //buildUsersList();
+    }
+
+    public List<Customer> getCustomerList() {
+        return customerList;
+    }
+
+    public void setCustomerList(List<Customer> customerList) {
+        this.customerList = customerList;
+    }
+
+    public Customer getSelectedCustomer() {
+        return selectedCustomer;
+    }
+
+    public void setSelectedCustomer(Customer selectedCustomer) {
+        this.selectedCustomer = selectedCustomer;
+    }
+
+    public UsersE getSelected() {
+        return selected;
+    }
+
+    public void setSelected(UsersE selected) {
+        this.selected = selected;
+    }
+
+    public UserFacade getUserFacade() {
+        return userFacade;
+    }
+
+    public void setUserFacade(UserFacade userFacade) {
+        this.userFacade = userFacade;
+    }
+
+    public void buildUsersList(){
+       /* CriteriaBuilder criteriaBuilder = userFacade.getEntityManager().getCriteriaBuilder();
+        CriteriaQuery cq = criteriaBuilder.createQuery(UsersEntity.class);
+        Root<UsersEntity> root = cq.from(UsersEntity.class);
+        cq.select(root);
+        setUsersList(userFacade.getEntityManager().createQuery(cq).getResultList());*/
+    }
+    public void create(){
+
+        UsersE user = new UsersE();
+        user.setLogin("New User");
+        user.setPassword("password");
+        user.setRole("Admin");
+        //user.setDataareaid(Long.valueOf(851));
+        userFacade.create(user);
+        selected = user;
+        usersList.clear();
+        usersList = userFacade.findAll();
+        addMessage("Пользователь создан ХАХА!");
+    }
+    public void save(){
+        try{
+            userFacade.edit(selected);
+            addMessage("Пользователь сохранен!");
+           }
+        catch (Exception ex){addMessage(ex.getCause().getMessage());}
+    }
+
+    public void edit(){
+
+        addMessage("Пользователь обновлен!");
+    }
+
+    public void delete(UsersE user){
+        log.info("Начинаем УДАЛАЯТЬ");
+        try{
+            log.info("Удаляем объект:" + user.getRecid());
+            userFacade.remove(user);
+            addMessage("Пользователь удален!");
+        }
+        catch (Exception ex){addMessage(ex.getCause().getMessage());}
+        usersList = userFacade.findAll();
+        selected = usersList.get(0);
+    }
+    public void search(){
+        addMessage("Пользователь найден!");
+    }
+
+    public List<UsersE> getUsersList() {
+        return usersList;
+    }
+
+    public void setUsersList(List<UsersE> usersList) {
+        this.usersList = usersList;
+    }
+
+    public void addMessage(String summary) {
+        FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, summary,  null);
+        FacesContext.getCurrentInstance().addMessage(null, message);
+    }
+}

@@ -1,0 +1,135 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+<h:head>
+
+    <title><ui:insert name="title">Orders</ui:insert></title>
+    <link rel="stylesheet" href="resources/css/theme.css" />
+
+    <link rel="stylesheet" href="resources/css/m-styles.min.css"/>
+</h:head>
+
+<h:body>
+    <!--<script src="resources/js/bootstrap.min.js"></script>
+    <script src="resources/js/m-radio.min.js"></script>
+    <script src="resources/js/m-dropdown.min.js"></script>-->
+
+
+<h:outputLabel value="Инструменты для анализа ипотечных сделок"
+               styleClass="m-text-small"/>
+    <br/>
+
+    <h:form id="form">
+    <p:growl id="messages" />
+
+</h:form>
+
+    <h:form>
+       <p:growl id="messages"/>
+
+
+
+        <p:commandButton value="Small"
+                                          update="messages, table"
+                                          action="#{userController.addUser}"
+                                          ajax="false"
+                                          styleClass="m-btn-metro m-btn-small m-perple m-icon-metro"/>
+        <br/>
+        <p:commandButton value="Medium"
+                         update="messages, table"
+                         action="#{userController.addUser}"
+                         ajax="false"
+                         styleClass="m-btn-metro m-btn-medium m-blue m-icon-metro"/>
+        <br/>
+        <p:commandButton value="Medium"
+                         update="messages, table"
+                         action="#{userController.addUser}"
+                         ajax="false"
+                         styleClass="m-btn-metro m-btn-large m-light-blue m-icon-metro"/>
+
+        <br/>
+        <p:commandButton value="Qwatro"
+                         update="messages, table"
+                         action="#{userController.addUser}"
+                         ajax="false"
+                         styleClass="m-btn-metro m-btn-qwatro m-green m-icon-metro"/>
+
+
+
+        <br/><br/>
+
+
+
+
+        <br/><br/><br/><br/>
+       <p:inputText styleClass="m-wrap" placeholder="Styled"/>
+       <br/><br/><br/>
+        <p:inputTextarea rows="10" cols="50"
+                         completeMethod="#{autoCompleteBean.completeArea}"
+                         queryDelay="750" minQueryLength="4"
+                         autoResize="false"
+                         styleClass="m-wrap" placeholder="Styled"/>
+
+       <br/><br/><br/>
+       <p:dataTable value="#{userController.usersList}"
+                    id="table"
+                    sortBy="#{item.name}"
+                    sortOrder="ascending"
+                    var="item"
+                    rows="200"
+                    scrollHeight="150"
+                    style="border:solid 1px;width:420px"
+                    >
+           <p:column sortBy="#{item.name}">
+               <f:facet name="header">
+                   <h:outputText value="Имя пользователя"/>
+               </f:facet>
+               <h:outputText value="#{item.name}"/>
+           </p:column>
+           <p:column sortBy="#{item.pasword}">
+               <f:facet name="header">
+                   <h:outputText value="Пароль"/>
+               </f:facet>
+               <h:outputText value="#{item.pasword}"/>
+           </p:column>
+       </p:dataTable>
+   </h:form>
+    <h:form id="calendar">
+
+    <h3>Inline</h3>
+    <p:calendar value="#{calendarBean.date1}" mode="inline" id="inlineCal" styleClass="m-wrap"/>
+    </h:form>
+
+
+    <p:accordionPanel styleClass="m-perple">
+        <p:tab title="Godfather Part I">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage value="/images/godfather/godfather1.jpg" />
+                <h:outputText
+                        value="The story begins as Don Vito Corleone, the head of a New York Mafia family, oversees his daughter's wedding.
+                His beloved son Michael has just come home from the war, but does not intend to become part of his father's business. T
+                hrough Michael's life the nature of the family business becomes clear. The business of the family is just like the head of the family, kind and benevolent to those who give respect,
+                but given to ruthless violence whenever anything stands against the good of the family." />
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Godfather Part II">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage value="/images/godfather/godfather2.jpg" />
+                <h:outputText value="Francis Ford Coppola's legendary continuation and sequel to his landmark 1972 film, The_Godfather, parallels the young Vito Corleone's rise with his son Michael's spiritual fall, deepening The_Godfather's depiction of the dark side of the American dream.
+            In the early 1900s, the child Vito flees his Sicilian village for America after the local Mafia kills his family. Vito struggles to make a living, legally or illegally, for his wife and growing brood in Little Italy,
+            killing the local Black Hand Fanucci after he demands his customary cut of the tyro's business. With Fanucci gone, Vito's communal stature grows." />
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Godfather Part III">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage value="/images/godfather/godfather3.jpg" />
+                <h:outputText value="After a break of more than 15 years, director Francis Ford Coppola and writer Mario Puzo returned to the well for this third and final story of the fictional Corleone crime family.
+                Two decades have passed, and crime kingpin Michael Corleone, now divorced from his wife Kay has nearly succeeded in keeping his promise that his family would one day be completely legitimate." />
+            </h:panelGrid>
+        </p:tab>
+    </p:accordionPanel>
+</h:body>
+</html>

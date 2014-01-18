@@ -1,0 +1,63 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:composite="http://java.sun.com/jsf/composite" xmlns:custom="http://java.sun.com/jstl/core">
+
+<composite:interface>
+    <composite:attribute name="inputValue"/>
+    <composite:attribute name="submitButtonText"/>
+    <composite:attribute name="currentPage"/>
+</composite:interface>
+
+<composite:implementation>
+    <h:form>
+        <p:growl id="messages"/>
+
+        <p:panelGrid columns="4" style="border: 10px; width: 100%">
+
+           <!-- <ui:param name="root" value="#{request.contextPath}" />
+            <img src="#{root}/resources/content/logo.jpg" style="width: 300px;height: 100px"/>-->
+
+            <h:panelGrid columns="1">
+                <p:graphicImage value="#{companyController.image}" width="600"  id="grpImage" height="600"/>
+
+                <h:outputText value="#{uiController.company.phone}" styleClass="m-text-medium"/>
+                <h:outputText value="Заказ в интернет-магазине: #{companyController.selected.phone}" styleClass="m-text-medium"/>
+
+
+            <div>
+            <p:commandLink action="#{uiController.goShopcart}" styleClass="m-text-medium">Ваша корзина
+            (
+                <h:outputText value="#{proposalController.shopingCart.cartBalance} РУБЛЕЙ" styleClass="m-text-medium">
+                    <f:convertNumber currencyCode="RUR" type="currency" minFractionDigits="2" />
+                </h:outputText>
+             )
+            </p:commandLink>
+            </div>
+                <p:panelGrid columns="4">
+                    <p:commandButton value="Продукты" action="#{uiController.addMessage('Фильтр только по категории Продукты')}"
+                                     styleClass="m-btn-assort m-light-blue" style="font-size: 24" update="messages"/>
+                    <p:commandButton value="Напитки" styleClass="m-btn-assort m-light-blue" style="font-size: 24"/>
+                    <p:commandButton value="Одежда" styleClass="m-btn-assort m-light-blue" style="font-size: 24"/>
+                    <p:commandButton value="Экслюзив" styleClass="m-btn-assort m-light-blue" style="font-size: 24"/>
+                </p:panelGrid>
+                <p:inputText value="#{uiController.searchString}"
+                             style="font-size:54px; width: 900px; height: 83px"
+                             onkeydown="if (event.keyCode == 13) event.keyCode = 9;"/>
+
+               <!-- <div id="topSearch">
+                    <form id="searchform" action="http://www.example.com/" method="get">
+                        <input type="submit" value="" id="searchsubmit"/>
+                        <input type="text" id="s" name="s" value="type your search" style="width: 215px; display: inline-block; "/>
+                    </form>
+                </div>-->
+
+        </h:panelGrid>
+        </p:panelGrid>
+    </h:form>
+
+</composite:implementation>
+
+</html>

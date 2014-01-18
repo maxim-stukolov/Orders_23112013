@@ -1,0 +1,46 @@
+package org.orders.entity;
+
+
+public class BonusTrans {
+
+    private Double bonusTransId;
+    private Customer customer;
+    private Double amount;
+    private Double balls;
+
+    public BonusTrans(Double bonusTransId) {
+        this.bonusTransId = bonusTransId;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public Double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Double amount) {
+        this.amount = amount;
+    }
+
+    public Double getBalls() {
+        return balls;
+    }
+
+    public void setBalls(Double balls) {
+        this.balls = balls;
+    }
+
+    public Double getBonusTransId() {
+        return bonusTransId;
+    }
+
+    public void setBonusTransId(Double bonusTransId) {
+        this.bonusTransId = bonusTransId;
+    }
+}
